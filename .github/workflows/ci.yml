@@ -18,8 +18,8 @@ jobs:
           #- macos-latest
           #- windows-latest
         python-version:
-          - "2.7"
-          - "3.6"
+          #- "2.7" # Because: ERROR: No matching distribution found for pandas>=1.3.0
+          #- "3.6" # Because: ERROR: No matching distribution found for pandas>=1.3.0
           - "3.7"
           - "3.8"
           - "3.9"
