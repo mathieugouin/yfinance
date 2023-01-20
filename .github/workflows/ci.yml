@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - main
+
 jobs:
   tests:
     name: "Test - Python ${{ matrix.python-version }} on ${{ matrix.os }}"
@@ -45,10 +46,9 @@ jobs:
         run: |
           python -m pip list
 
-      # Append coverage (-a)
       - name: "Execute tests with coverage"
         run: |
-          python -m coverage run -a -m pytest -v
+          python -m coverage run -m pytest -v
 
       - name: "Display coverage report"
         run: |
